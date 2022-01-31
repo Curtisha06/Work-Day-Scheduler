@@ -44,11 +44,11 @@ $(document).ready(function () {
     $("button").on("click", function (event) {
         event.preventDefault();
 
-        var textInput = $(this).siblings("input").attr("data");
-        var textVal = $(this).siblings("input").val();
+        var textInput = $(text).siblings("input").attr("data");
+        var textVal = $(text).siblings("input").val();
         localStorage.setItem(textInput, textVal);
         var lsVal = localStorage.getItem(textInput);
-        $(this).siblings("input").text(lsVal);
+        $(textVal).siblings("input").text(lsVal);
     });
 
 
